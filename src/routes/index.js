@@ -1,5 +1,5 @@
-const royalFilmsRoute = require('./royalFilms');
+const mercolibreRoute = require("./mercadolibre");
 
 module.exports = {
-	royalFilmsRoute,
+  mercolibreRoute,
 };

@@ -1,6 +1,6 @@
 const { writeJSONResponse } = require("./utils");
 
-const { royalFilmsRoute } = require("./routes");
+const { mercolibreRoute } = require("./routes");
 
 async function listener(req, res) {
   if (req.method !== "GET") {
@@ -8,8 +8,8 @@ async function listener(req, res) {
     return;
   }
   switch (req.url) {
-    case "/royal-films/barranquilla":
-      await royalFilmsRoute.get(req, res);
+    case "/mercadolibre":
+      await mercolibreRoute.get(req, res);
       break;
     default:
       res.writeJSONResponse({ data: null, err: "Route not found" }, 404);
